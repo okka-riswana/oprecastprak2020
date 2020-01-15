@@ -38,7 +38,7 @@
     <v-app-bar
       :clipped-left="clipped"
       :collapse-on-scroll="true"
-      dense
+      elevate-on-scroll
       fixed
       app
     >
@@ -51,10 +51,11 @@
       </v-container>
     </v-content>
     <v-footer
-      :fixed="fixed"
+      absolute
+      :width="100"
       app
     >
-      <span>&copy; 2020</span>
+      <span><a href="https://github.com/atjhoendz" target="_blank" style="color:black; text-decoration:none"> &copy; 2020</a></span>
     </v-footer>
   </v-app>
 </template>
@@ -64,7 +65,7 @@ export default {
   data () {
     return {
       clipped: false,
-      drawer: true,
+      drawer: false,
       fixed: false,
       items: [
         {
