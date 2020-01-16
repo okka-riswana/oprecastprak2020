@@ -47,6 +47,44 @@
       <div class="my-3">
         <timeline />
       </div>
+      <v-row
+        class="mt-5"
+        justify="center"
+      >
+        <v-btn
+          class="ml-7 white--text"
+          depressed
+          color="red darken-1"
+          to="/requirements"
+          router
+          exact
+        >
+          Register Now
+        </v-btn>
+      </v-row>
+    </v-flex>
+    <v-flex
+      xs10
+      sm10
+      md10
+      class="mt-12"
+    >
+      <h1 class="title">Further Questions?</h1>
+      <p class="body-1">Drop your question to <b>{{ cp1 }}</b> or <b>{{ cp2 }}</b></p>
+      <v-row
+        justify="center"
+      >
+        <v-btn
+          class="font-weight-bold"
+          color="primary"
+          text
+          to="/faq"
+          router
+          exact
+        >
+          Frequently Asked Questions
+        </v-btn>
+      </v-row>
     </v-flex>
     <div class="line2">
     </div>
@@ -61,7 +99,11 @@ export default {
   components: {
     Timeline,
     Banner
-  }
+  },
+  data: () => ({
+    cp1: 'Marcell Antonius (Line ID : )',
+    cp2: 'Faradilla Azranur (Line ID : )'
+  })
 }
 </script>
 

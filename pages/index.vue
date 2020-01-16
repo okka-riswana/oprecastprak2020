@@ -67,30 +67,30 @@
       >
         <v-flex xs12 sm6 md3 pr-4 pt-4>
           <v-card shaped>
-            <v-card-title class="body-1" style="background: rgba(253, 210, 49, 0.2);">
+            <v-card-text class="body-1 black--text" style="background: rgba(99, 163, 227, 0.5);">
               As the facilitator, share your knowledge.
-            </v-card-title>
+            </v-card-text>
           </v-card>
         </v-flex>
         <v-flex xs12 sm6 md3 pr-4 pt-4>
           <v-card shaped>
-            <v-card-title class="body-1" style="background: rgba(155, 81, 224, 0.2);">
+            <v-card-text class="body-1 black--text" style="background: rgba(250, 203, 47, 0.5);">
               Delivering the subject to students.
-            </v-card-title>
+            </v-card-text>
           </v-card>
         </v-flex>
         <v-flex xs12 sm6 md3 pr-4 pt-4>
           <v-card shaped>
-            <v-card-title class="body-1" style="background: rgba(80, 211, 141, 0.2);">
+            <v-card-text class="body-1 black--text" style="background: rgba(136, 92, 179, 0.5);">
               Create, conduct, and examine assignments.
-            </v-card-title>
+            </v-card-text>
           </v-card>
         </v-flex>
         <v-flex xs12 sm6 md3 pr-4 pt-4>
           <v-card shaped>
-            <v-card-title class="body-1" style="background: rgba(253, 210, 49, 0.2);">
+            <v-card-text class="body-1 black--text" style="background: rgba(243, 163, 211, 0.5);">
               Responsible for laboratory maintenance.
-            </v-card-title>
+            </v-card-text>
           </v-card>
         </v-flex>
       </v-row>
@@ -114,30 +114,30 @@
       >
         <v-flex xs12 sm6 md3 pr-4 pt-4>
           <v-card shaped>
-            <v-card-title class="body-1" style="background: rgba(253, 210, 49, 0.2);">
+            <v-card-text class="body-1 black--text" style="background: rgba(250, 203, 47, 0.5);">
               Gain valuable experience.
-            </v-card-title>
+            </v-card-text>
           </v-card>
         </v-flex>
         <v-flex xs12 sm6 md3 pr-4 pt-4>
           <v-card shaped>
-            <v-card-title class="body-1" style="background: rgba(155, 81, 224, 0.2);">
+            <v-card-text class="body-1 black--text" style="background: rgba(99, 163, 227, 0.5);">
               Develop and refine your skills.
-            </v-card-title>
+            </v-card-text>
           </v-card>
         </v-flex>
         <v-flex xs12 sm6 md3 pr-4 pt-4>
           <v-card shaped>
-            <v-card-title class="body-1" style="background: rgba(80, 211, 141, 0.2);">
+            <v-card-text class="body-1 black--text" style="background: rgba(243, 163, 211, 0.5);">
               Gain confidence.
-            </v-card-title>
+            </v-card-text>
           </v-card>
         </v-flex>
         <v-flex xs12 sm6 md3 pr-4 pt-4>
           <v-card shaped>
-            <v-card-title class="body-1" style="background: rgba(253, 210, 49, 0.2);">
+            <v-card-text class="body-1 black--text" style="background: rgba(136, 92, 179, 0.5);">
               Other good benefits.
-            </v-card-title>
+            </v-card-text>
           </v-card>
         </v-flex>
       </v-row>
@@ -156,8 +156,14 @@
         <h1 class="display-1 mb-6">COURSE</h1>
       </v-row>
       <v-flex class="pl-12 pr-12 text-center body-1">
-        <p>Data Structure, Architecture & Organization of Computer, Database System I, Computer Networks, Digital Image Processing, Artificial Intelligence, Information System Multimedia, Analytics Algorithm, Distributed Database.</p>
-        <p>Algorithm & Programming, Numerical Method, Cryptography, Robotic, Object Oriented Programming I, Software Engineering, Web Programming, Database System II.</p>
+        <v-chip-group :column="$vuetify.breakpoint.mdAndUp">
+          <v-row
+            align="center"
+            justify="center"
+          >
+            <v-chip v-for="matkul in matkuls" :key="matkul" class="ma-1" draggable>{{ matkul }}</v-chip>
+          </v-row>
+        </v-chip-group>
       </v-flex>
     </v-flex>
     <div class="line">
@@ -205,7 +211,28 @@ import Gallery from '~/components/Gallery.vue'
 export default {
   components: {
     Gallery
-  }
+  },
+  data: () => ({
+    matkuls: [
+      'Data Structure',
+      'Architecture & Organization of Computer',
+      'Database System I',
+      'Computer Networks',
+      'Digital Image Processing',
+      'Artificial Intelligence',
+      'Information System Multimedia',
+      'Analytics Algorithm',
+      'Distributed Database',
+      'Algorithm & Programming',
+      'Numerical Method',
+      'Cryptography',
+      'Robotic',
+      'Object Oriented Programming I',
+      'Software Engineering',
+      'Web Programming',
+      'Database System II'
+    ]
+  })
 }
 </script>
 <style>
