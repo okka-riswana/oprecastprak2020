@@ -28,7 +28,7 @@
         justify="center"
         class="text-center"
       >
-        <p class="body-1">Want to take part in 2019 Lab Assistant selection? Well there are some things that you must prepare.<br> See the info below for the selection flow.</p>
+        <p class="body-1">Want to take part in 2020 Lab Assistant selection? Well there are some things that you must prepare.<br> See the info below for the selection flow.</p>
       </v-row>
     </v-flex>
     <div class="line2">
@@ -55,9 +55,8 @@
           class="ml-7 white--text"
           depressed
           color="red darken-1"
-          to="/requirements"
-          router
-          exact
+          href="https://docs.google.com/forms/d/e/1FAIpQLSd3wpdY3_r5UnVbDF5uUmuChMUza4HziizyiuGdmF79Ngx-AQ/viewform"
+          target="_blank"
         >
           Register Now
         </v-btn>
@@ -101,8 +100,8 @@ export default {
     Banner
   },
   data: () => ({
-    cp1: 'Marcell Antonius (Line ID : )',
-    cp2: 'Faradilla Azranur (Line ID : )'
+    cp1: 'Marcell Antonius (Line ID : marcell_antonius14)',
+    cp2: 'Faradilla Azranur (Line ID : fardil7)'
   })
 }
 </script>

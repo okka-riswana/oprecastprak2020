@@ -65,7 +65,7 @@
         class="text-center"
         cols="12"
       >
-        <a href="https://github.com/atjhoendz" target="_blank" style="color:black; text-decoration:none"> &copy; 2020 - Asprak2020</a>
+        <a href="https://github.com/atjhoendz" target="_blank" style="color:black; text-decoration:none"> &copy; 2020 - Asprak2019</a>
       </v-col>
     </v-footer>
   </v-app>

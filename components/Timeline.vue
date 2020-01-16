@@ -17,11 +17,27 @@
           <span>{{ item.desc_det }}</span>
           <ul class="pa-5">
             <li
-              v-for="(desc) in item.descs"
+              v-for="desc in item.descs"
             >
-              {{ desc.poin }}
+              {{ desc }}
             </li>
+            <ul>
+              <li
+                v-for="kriteria in item.kriteria_video"
+              >
+                {{ kriteria }}
+              </li>
+            </ul>
           </ul>
+          <v-btn
+            v-if="typeof item.link_upload_jawaban != 'undefined'"
+            outlined
+            :color="item.color"
+            :href="item.link_upload_jawaban"
+            target="_blank"
+          >
+            Upload Answer
+          </v-btn>
           <span
             class="body-1 font-weight-bold"
             :class="item.color + '--text'"
@@ -43,9 +59,9 @@ export default {
         icon: 'mdi-star',
         title: 'Make sure your\'e fit the requirements.',
         descs: [
-          { poin: 'Anggota Penuh Himatif FMIPA Unpad and currently in third year (2016) or second year (2017).' },
-          { poin: 'Minimum GPA 3.00.' },
-          { poin: 'Have minimum grade B for the subject you wanted.' }
+          'Anggota Penuh Himatif FMIPA Unpad and currently in third year (2017) or second year (2018).',
+          'Minimum GPA 3.00.',
+          'Have minimum grade B for the subject you wanted.'
         ]
       },
       {
@@ -54,19 +70,39 @@ export default {
         title: 'Registration & Pre-screening Assessment.',
         date: '17 January 2020 - 31 January 2020',
         descs: [
-          { poin: 'Register yourself, fill the form. ' },
-          { poin: 'Upload the requirement files (CV, Cover Letter) in pdf files.' },
-          { poin: 'Upload your Academic Transcript (jpg/jpeg).' },
-          { poin: 'Submit Instagram links for short introduction video.' }
+          'Register yourself, fill the form.',
+          'Upload the requirement files (CV, Cover Letter) in pdf files.',
+          'Upload your Academic Transcript from students.unpad.ac.id',
+          'Submit Instagram links for short introduction video. The Rules of Video :'
+        ],
+        kriteria_video: [
+          'Show yourself',
+          'Introduce yourself',
+          'The reason why you want to be Asprak',
+          'Make it as creative as possible'
         ]
       },
       {
         color: 'green',
         icon: 'mdi-laptop',
         title: 'Online Assessment.',
-        date: '2 February 2020 - 4 February 2020',
+        date: '2 February 2020 start at 1 PM WIB',
         descs: [
-          { poin: 'A test for your basic skills, you will be given a chance to answer some questions.' }
+          'A test for your basic skills.',
+          'You will be given a chance to answer some questions in 5 hours.',
+          'The Answer Upload to this link in PDF file.',
+          'Upload link will be open at 1 PM WIB and closed at 6 PM WIB.'
+        ],
+        link_upload_jawaban: 'https://google.com'
+      },
+      {
+        color: 'brown',
+        icon: 'mdi-flag',
+        title: 'Elimination Section',
+        date: '6 February 2020',
+        descs: [
+          'After going through 2 stages of registration with various assessments, you will be invited to multichat.',
+          'For those of you who haven\'t had the chance, stay motivated, there\'s still a chance next year.'
         ]
       },
       {
@@ -75,19 +111,19 @@ export default {
         title: 'On-the-ground Assessment.',
         date: '10 February 2020',
         descs: [
-          { poin: 'Lecture Simulation.' },
-          { poin: 'Face-to-face Interview.' },
-          { poin: 'Coding test.' }
+          'Lecture Simulation.',
+          'Face-to-face Interview.',
+          'Coding test.'
         ],
         desc_det: 'Further assessment, this is the main part of your application, you will be test based your skills & knowledge in programming and other skills.'
       },
       {
         color: 'orange',
-        icon: 'mdi-flag',
+        icon: 'mdi-medal',
         date: '15 February 2020',
         title: 'Result Announcement.',
         descs: [
-          { poin: 'Please check Laboratory Assistant Official Account for the result.' }
+          'Please check Laboratory Assistant Official Account for the result.'
         ]
       }
     ]
