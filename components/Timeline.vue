@@ -93,7 +93,7 @@ export default {
           'The Answer Upload to this link in PDF file.',
           'Upload link will be open at 1 PM WIB and closed at 6 PM WIB.'
         ],
-        link_upload_jawaban: 'https://google.com'
+        link_upload_jawaban: 'https://www.dropbox.com'
       },
       {
         color: 'brown',
