@@ -81,16 +81,16 @@ export default {
       items: [
         {
           icon: 'mdi-home',
-          title: 'Welcome',
+          title: 'Home',
           to: '/'
         },
         {
-          icon: 'mdi-chart-bubble',
+          icon: 'mdi-rhombus-split',
           title: 'Requirements',
           to: '/requirements'
         },
         {
-          icon: 'mdi-lamp',
+          icon: 'mdi-poll-box',
           title: 'FAQ',
           to: 'faq'
         }

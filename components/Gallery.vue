@@ -1,7 +1,7 @@
 <template>
   <v-sheet
     class="mx-auto"
-    style="background-color: white;"
+    style="background-color: #fafafa;"
   >
     <v-slide-group
       v-model="item"

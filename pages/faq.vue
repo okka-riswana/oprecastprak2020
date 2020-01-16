@@ -17,21 +17,23 @@
       xs10
       sm10
       md10
-      class="mt-5 mb-12"
+      class="mt-5"
     >
       <v-expansion-panels>
         <v-expansion-panel
           v-for="faq in faqs"
         >
-          <v-expansion-panel-header>
-            <b>{{ faq.q }}</b>
+          <v-expansion-panel-header class="body-1 font-weight-bold">
+            {{ faq.q }}
           </v-expansion-panel-header>
-          <v-expansion-panel-content>
+          <v-expansion-panel-content class="body-1">
             <b>Answer : </b>{{ faq.a }}
           </v-expansion-panel-content>
         </v-expansion-panel>
       </v-expansion-panels>
     </v-flex>
+    <div class="line2">
+    </div>
     <v-flex
       xs10
       sm10
