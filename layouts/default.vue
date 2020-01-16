@@ -37,16 +37,22 @@
     </v-navigation-drawer>
     <v-app-bar
       :clipped-left="clipped"
-      :collapse-on-scroll="true"
+      :collapse-on-scroll="false"
       elevate-on-scroll
+      inverted-scroll
       fixed
+      dense
       app
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <v-toolbar-title v-text="title" />
     </v-app-bar>
     <v-content>
-      <v-container>
+      <v-container
+        fluid
+        ma-0
+        pa-0
+      >
         <nuxt />
       </v-container>
     </v-content>
@@ -75,8 +81,13 @@ export default {
         },
         {
           icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/inspire'
+          title: 'Requirements',
+          to: '/requirements'
+        },
+        {
+          icon: 'mdi-lamp',
+          title: 'FAQ',
+          to: 'faq'
         }
       ],
       miniVariant: true,
