@@ -63,7 +63,7 @@
       <v-row
         align="center"
         justify="center"
-        class="pl-12 pr-12 mt-6"
+        class="pl-12 pr-12 mt-6 text-center"
       >
         <v-flex xs12 sm6 md3 pr-4 pt-4>
           <v-card shaped>
@@ -110,7 +110,7 @@
       <v-row
         align="center"
         justify="center"
-        class="pl-12 pr-12 mt-6"
+        class="pl-12 pr-12 mt-6 text-center"
       >
         <v-flex xs12 sm6 md3 pr-4 pt-4>
           <v-card shaped>
