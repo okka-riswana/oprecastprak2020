@@ -35,6 +35,7 @@
             :color="item.color"
             :href="item.link_upload_jawaban"
             target="_blank"
+            hidden
           >
             Upload Answer
           </v-btn>
@@ -57,7 +58,7 @@ export default {
       {
         color: 'red lighten-2',
         icon: 'mdi-star',
-        title: 'Make sure your\'e fit the requirements.',
+        title: 'Make sure you are fit the requirements.',
         descs: [
           'Anggota Penuh Himatif FMIPA Unpad and currently in third year (2017) or second year (2018).',
           'Minimum GPA 3.00.',
@@ -76,10 +77,12 @@ export default {
           'Submit Instagram links for short introduction video. The Rules of Video :'
         ],
         kriteria_video: [
-          'Show yourself',
+          'Make sure your own face is shown',
           'Introduce yourself',
-          'The reason why you want to be Asprak',
-          'Make it as creative as possible'
+          'The reason why you want to be part of us',
+          'Make it as creative as possible',
+          'Use hashtag #oprectasprak2020',
+          'Make sure your instagram account is not private'
         ]
       },
       {
@@ -89,10 +92,11 @@ export default {
         date: '2 February 2020 start at 1 PM WIB',
         descs: [
           'A test for your basic skills.',
-          'You will be given a chance to answer some questions in 5 hours.',
-          'The Answer Upload to this link in PDF file.',
-          'Upload link will be open at 1 PM WIB and closed at 6 PM WIB.'
-        ]
+          'You will be given a chance to answer some questions in 5 hours ( From 01.00 PM to 06.00 PM ).',
+          'Format File NPM.pdf',
+          'Test questions will be given at 01.00 PM and submission link will be closed at 06.00 PM'
+        ],
+        link_upload_jawaban: 'https://www.dropbox.com/request/4oxps8nqEqri1BTBLHJJ'
       },
       {
         color: 'brown',
@@ -100,8 +104,7 @@ export default {
         title: 'Elimination Section',
         date: '6 February 2020',
         descs: [
-          'After going through 2 stages of registration with various assessments, you will be invited to multichat.',
-          'For those of you who haven\'t had the chance, stay motivated, there\'s still a chance next year.'
+          'After going through 2 stages of registration with various assessments, you will be invited to Line multichat to proceed into final assessment.'
         ]
       },
       {
@@ -122,7 +125,7 @@ export default {
         date: '15 February 2020',
         title: 'Result Announcement.',
         descs: [
-          'Please check Laboratory Assistant Official Account for the result.'
+          'Please check Laboratory Assistant Line Official Account for the result.'
         ]
       }
     ]
