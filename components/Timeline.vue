@@ -35,7 +35,6 @@
             :color="item.color"
             :href="item.link_upload_jawaban"
             target="_blank"
-            hidden
           >
             Upload Answer
           </v-btn>
@@ -54,6 +53,7 @@
 <script>
 export default {
   data: () => ({
+    soal: 'soal/namafile.docx',
     items: [
       {
         color: 'red lighten-2',
