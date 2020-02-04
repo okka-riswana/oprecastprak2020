@@ -35,6 +35,7 @@
             :color="item.color"
             :href="item.link_upload_jawaban"
             target="_blank"
+            hidden
           >
             Upload Answer
           </v-btn>
@@ -53,7 +54,6 @@
 <script>
 export default {
   data: () => ({
-    soal: 'soal/namafile.docx',
     items: [
       {
         color: 'red lighten-2',
@@ -111,7 +111,7 @@ export default {
         color: 'indigo',
         icon: 'mdi-buffer',
         title: 'On-the-ground Assessment.',
-        date: '10 February 2020',
+        date: '12 February 2020',
         descs: [
           'Lecture Simulation.',
           'Face-to-face Interview.',
