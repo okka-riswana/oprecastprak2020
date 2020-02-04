@@ -1,5 +1,5 @@
 <template>
-  <v-timeline align-top :dense="$vuetify.breakpoint.smAndDown">
+  <v-timeline :dense="$vuetify.breakpoint.smAndDown" align-top>
     <v-timeline-item
       v-for="(item, i) in items"
       :key="i"
@@ -7,12 +7,14 @@
       :icon="item.icon"
       fill-dot
     >
-      <span slot="opposite" class="body-1 font-weight-bold" :class="item.color + '--text'">{{ item.date }}</span>
+      <span slot="opposite" :class="item.color + '--text'" class="body-1 font-weight-bold">{{ item.date }}</span>
       <v-card
         :color="item.color"
         dark
       >
-        <v-card-title class="title">{{ item.title }}</v-card-title>
+        <v-card-title class="title">
+          {{ item.title }}
+        </v-card-title>
         <v-card-text class="white body-1 text--primary">
           <span>{{ item.desc_det }}</span>
           <ul class="pa-5">
@@ -31,18 +33,18 @@
           </ul>
           <v-btn
             v-if="typeof item.link_upload_jawaban != 'undefined'"
-            outlined
             :color="item.color"
             :href="item.link_upload_jawaban"
+            outlined
             target="_blank"
             hidden
           >
             Upload Answer
           </v-btn>
           <span
-            class="body-1 font-weight-bold"
             :class="item.color + '--text'"
             v-if="typeof item.date != 'undefined' && $vuetify.breakpoint.smAndDown"
+            class="body-1 font-weight-bold"
           >
             {{ item.date }}
           </span>
